@@ -13,7 +13,7 @@ interface IProps {
     h?: TSizeValue
     text?: string
     round?: boolean
-    aspect?: string
+    aspect?: string|number
 }
 
 
