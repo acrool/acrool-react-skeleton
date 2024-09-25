@@ -14,6 +14,7 @@ interface IProps {
     text?: string
     round?: boolean
     aspect?: string|number
+    pause?: boolean
 }
 
 
@@ -31,6 +32,7 @@ const Skeleton = ({
     aspect,
     round,
     text,
+    pause
 }: IProps) => {
 
     return <div
@@ -42,6 +44,7 @@ const Skeleton = ({
         }}
         data-aspect={aspect ? '': undefined}
         data-round={round ? '': undefined}
+        data-pause={pause ? '': undefined}
     >
         {text ?? '⬛'}
     </div>;

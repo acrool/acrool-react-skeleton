@@ -39,6 +39,10 @@
     animation-timing-function: ease;
     animation-iteration-count: infinite;
 
+    &[data-pause]{
+        animation-play-state: paused;
+    }
+
     &[data-round]{
         width: auto;
         height: auto;
