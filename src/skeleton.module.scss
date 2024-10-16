@@ -10,12 +10,10 @@
 
 @keyframes skeleton-loading{
     0% {
-        transform: translateX(0%);
-        //transform: translate(0, 0);
+        transform: translate3d(-50%, 0, 0);
     }
     100% {
-        transform: translateX(-50%);
-        //transform: translate(-40%, -40%); /* 動畫將使用 translateX 來移動背景 */
+        transform: translate3d(0, 0, 0);
     }
 }
 
@@ -67,14 +65,8 @@
                 var(--default-skeleton-gradient-from-color) 63%
         );
         background-size: 100% 100%;
-
-        animation-name: skeleton-loading;
-        animation-duration: 1.4s;
-        animation-timing-function: ease;
-        animation-iteration-count: infinite;
-
-        //transform: translate(0, 0);
-        //transform: translate(-80%, 0); /* 動畫將使用 translateX 來移動背景 */
+        animation: skeleton-loading 1.4s ease infinite;
+        transform: translate3d(-50%, 0, 0);
 
     }
 }
