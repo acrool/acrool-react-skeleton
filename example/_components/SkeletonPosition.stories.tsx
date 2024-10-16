@@ -1,13 +1,13 @@
+
 import {useArgs} from '@storybook/preview-api';
 import type {Meta, StoryObj} from '@storybook/react';
 import {fn} from '@storybook/test';
-import {Flex} from '@acrool/react-grid';
 
 import {Skeleton} from '@acrool/react-skeleton';
-import {LotteryDrawCardSkeleton, LotteryDrawCardSkeletonPosition} from '../src/components/LotteryDrawCard';
+import {LotteryDrawCardSkeletonPosition} from '../src/components/LotteryDrawCard';
 
 const meta = {
-    title: 'Components/Skeleton',
+    title: 'Components/SkeletonPosition',
     component: Skeleton,
     parameters: {
         layout: 'centered',
@@ -30,9 +30,6 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
     args: {},
     render: function Render(args) {
-        return <Flex column>
-            <LotteryDrawCardSkeleton/>
-            <LotteryDrawCardSkeletonPosition/>
-        </Flex>;
+        return <LotteryDrawCardSkeletonPosition/>;
     },
 };

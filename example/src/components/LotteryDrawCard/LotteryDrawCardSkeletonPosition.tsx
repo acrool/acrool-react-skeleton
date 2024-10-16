@@ -1,10 +1,10 @@
 import {Flex, fr, Grid} from '@acrool/react-grid';
 import styled from 'styled-components';
 
-import {Skeleton} from '@acrool/react-skeleton';
+import {SkeletonPosition as Skeleton} from '@acrool/react-skeleton';
 import {generatorArray} from '@acrool/js-utils/array';
 
-const LotteryDrawCardSkeleton = () => {
+const LotteryDrawCardSkeletonPosition = () => {
     return <LotteryDrawCardSkeletonRoot>
         <Flex className="justify-content-between gap-4">
             <Skeleton text="Next draw : 2024/09/01 13:02:53"/>
@@ -28,7 +28,7 @@ const LotteryDrawCardSkeleton = () => {
     </LotteryDrawCardSkeletonRoot>;
 };
 
-export default LotteryDrawCardSkeleton;
+export default LotteryDrawCardSkeletonPosition;
 
 
 

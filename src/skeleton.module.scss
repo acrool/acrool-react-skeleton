@@ -10,10 +10,12 @@
 
 @keyframes skeleton-loading{
     0% {
-        background-position: 100% 50%;
+        transform: translateX(0%);
+        //transform: translate(0, 0);
     }
     100% {
-        background-position: 0 50%;
+        transform: translateX(-50%);
+        //transform: translate(-40%, -40%); /* 動畫將使用 translateX 來移動背景 */
     }
 }
 
@@ -30,14 +32,9 @@
     line-height: 1;
     border-radius: var(--default-skeleton-radius);
     color: var(--default-skeleton-color);
+    position: relative;
+    overflow: hidden;
 
-    background: linear-gradient(90deg, var(--default-skeleton-gradient-from-color) 25%, var(--default-skeleton-gradient-to-color) 37%, var(--default-skeleton-gradient-from-color) 63%);
-    background-size: 400% 100%;
-
-    animation-name: skeleton-loading;
-    animation-duration: 1.4s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
 
     &[data-pause]{
         animation-play-state: paused;
@@ -52,6 +49,33 @@
     &[data-aspect]{
         width: auto;
         height: auto;
+    }
+
+
+    &:before{
+        content: "";
+        opacity: 0.8;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 400%; /* 擴大背景圖大小，讓它可以循環 */
+        height: 100%;
+        background: linear-gradient(90deg,
+                var(--default-skeleton-gradient-from-color) 25%,
+                var(--default-skeleton-gradient-to-color) 37%,
+                var(--default-skeleton-gradient-from-color) 63%
+        );
+        background-size: 100% 100%;
+
+        animation-name: skeleton-loading;
+        animation-duration: 1.4s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+
+        //transform: translate(0, 0);
+        //transform: translate(-80%, 0); /* 動畫將使用 translateX 來移動背景 */
+
     }
 }
 
