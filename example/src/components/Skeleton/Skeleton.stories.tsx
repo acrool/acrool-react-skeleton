@@ -1,13 +1,9 @@
-
-import {useArgs} from '@storybook/preview-api';
 import type {Meta, StoryObj} from '@storybook/react';
-import {fn} from '@storybook/test';
 
 import {Skeleton} from '@acrool/react-skeleton';
-import {LotteryDrawCardSkeletonPosition} from '../src/components/LotteryDrawCard';
 
 const meta = {
-    title: 'Components/SkeletonPosition',
+    title: 'Components/Skeleton',
     component: Skeleton,
     parameters: {
         layout: 'centered',
@@ -29,7 +25,4 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
     args: {},
-    render: function Render(args) {
-        return <LotteryDrawCardSkeletonPosition/>;
-    },
 };
