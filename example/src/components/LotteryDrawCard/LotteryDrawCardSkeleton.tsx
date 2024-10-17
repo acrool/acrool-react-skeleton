@@ -18,7 +18,7 @@ const LotteryDrawCardSkeleton = () => {
         <Grid col={fr(3)} className="gx-2">
             {generatorArray(3)
                 .map((key) => {
-                    return <Flex col="column" className="gap-2" key={key}>
+                    return <Flex column className="gap-2" key={key}>
                         <Skeleton h={110}/>
                         <Skeleton round w={46} className="mx-auto"/>
                         <Skeleton text="#2412394" className="mx-auto"/>

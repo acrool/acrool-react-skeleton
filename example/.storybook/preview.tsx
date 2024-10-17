@@ -1,6 +1,5 @@
 import type { Preview } from "@storybook/react";
 // import './reset.css';
-import '@acrool/react-picker/dist/index.css';
 import '@acrool/react-skeleton/dist/index.css';
 import '@acrool/react-grid/dist/index.css';
 import {GridThemeProvider} from "@acrool/react-grid";

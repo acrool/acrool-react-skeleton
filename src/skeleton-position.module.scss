@@ -1,23 +1,23 @@
-.root,
-.root *,
-.root *::before,
-.root *::after{
+.position-root,
+.position-root *,
+.position-root *::before,
+.position-root *::after{
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     line-height: normal;
     user-select: none;
 }
 
-@keyframes skeleton-loading{
+@keyframes position-skeleton-loading{
     0% {
-        transform: translate3d(-50%, 0, 0);
+        background-position: 100% 50%;
     }
     100% {
-        transform: translate3d(0, 0, 0);
+        background-position: 0 50%;
     }
 }
 
-.root {
+.position-root {
     --default-skeleton-gradient-from-color: var(--skeleton-gradient-from-color, rgba(133, 133, 133, 0.1));
     --default-skeleton-gradient-to-color: var(--skeleton-gradient-to-color, rgba(133, 133, 133, 0.2));
     --default-skeleton-radius: var(--skeleton-radius, 8px);
@@ -30,9 +30,14 @@
     line-height: 1;
     border-radius: var(--default-skeleton-radius);
     color: var(--default-skeleton-color);
-    position: relative;
-    overflow: hidden;
 
+    background: linear-gradient(90deg, var(--default-skeleton-gradient-from-color) 25%, var(--default-skeleton-gradient-to-color) 37%, var(--default-skeleton-gradient-from-color) 63%);
+    background-size: 400% 100%;
+
+    animation-name: position-skeleton-loading;
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
 
     &[data-pause]{
         animation-play-state: paused;
@@ -47,27 +52,6 @@
     &[data-aspect]{
         width: auto;
         height: auto;
-    }
-
-
-    &:before{
-        content: "";
-        opacity: 0.8;
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 400%; /* 擴大背景圖大小，讓它可以循環 */
-        height: 100%;
-        background: linear-gradient(90deg,
-                var(--default-skeleton-gradient-from-color) 25%,
-                var(--default-skeleton-gradient-to-color) 37%,
-                var(--default-skeleton-gradient-from-color) 63%
-        );
-        background-size: 100% 100%;
-        animation: skeleton-loading 1.4s ease infinite;
-        transform: translate3d(-50%, 0, 0);
-
     }
 }
 
