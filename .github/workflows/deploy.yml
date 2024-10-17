@@ -26,8 +26,8 @@ jobs:
       - name: Replace local links with actual versions
         run: |
           sed -i 's#"@acrool/react-skeleton": "link:.."#"@acrool/react-skeleton": "latest"#' package.json
-          sed -i 's#"react": "link:../node_modules/react"#"react": "^18.0.0"#' package.json
-          sed -i 's#"react-dom": "link:../node_modules/react-dom"#"react-dom": "^18.0.0"#' package.json
+          sed -i 's#"react": "link:../node_modules/react"#"react": "^18.2.0"#' package.json
+          sed -i 's#"react-dom": "link:../node_modules/react-dom"#"react-dom": "^18.2.0"#' package.json
 
       - name: Install dependencies
         run: yarn install
