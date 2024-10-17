@@ -1,16 +1,17 @@
 import type {Meta, StoryObj} from '@storybook/react';
-import {Flex} from '@acrool/react-grid';
+import {Col, Flex, Row} from '@acrool/react-grid';
 
+import previewImg from './preview.webp';
 import LotteryDrawCardSkeleton from './LotteryDrawCardSkeleton';
 
 const meta = {
-    title: 'Examples/LotteryDrawCardSkeleton',
+    title: 'Examples/LotteryDrawCard',
     component: LotteryDrawCardSkeleton,
     parameters: {
         layout: 'centered',
         docs: {
             description: {
-                component: 'Custom skeleton by component'
+                component: 'Custom skeleton lottery draw card'
             },
         },
     },
@@ -27,8 +28,14 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
     args: {},
     render: function Render(args) {
-        return <Flex column>
-            <LotteryDrawCardSkeleton/>
-        </Flex>;
+        return <Row>
+            <Col col>
+                <img src={previewImg} width="auto" height="261px"/>
+            </Col>
+            <Col col>
+                <LotteryDrawCardSkeleton/>
+            </Col>
+
+        </Row>;
     },
 };
