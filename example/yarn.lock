@@ -14,9 +14,12 @@
   resolved "https://registry.yarnpkg.com/@acrool/react-grid/-/react-grid-5.2.5-alpha.0.tgz#7da9768ce8d95dd97a403b48ae47d590711a4e26"
   integrity sha512-9HVqXgyBwrOBOYltufu0ALXAiOXSnM4T7ch67nOh0GrDcFVKQO7NIw7wTIH/pgE8pNefDx3yWhOfisSQS4g+mg==
 
-"@acrool/react-skeleton@link:..":
-  version "0.0.0"
-  uid ""
+"@acrool/react-skeleton@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@acrool/react-skeleton/-/react-skeleton-1.0.0.tgz#8f7609f8c717e31be83f8553b0f3abd41af9679d"
+  integrity sha512-K5zkUQu/tOnaZGnwmTyWYyZRiaxznhyL/BiqmuMLq6XHssCtQf2PZg/+fpeQn4YW9em+MYieuCVIiqhJm/TfMw==
+  dependencies:
+    clsx "2.1.1"
 
 "@adobe/css-tools@^4.3.2":
   version "4.4.0"
