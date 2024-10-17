@@ -9,6 +9,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: ./example
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -20,7 +24,6 @@ jobs:
 
       - name: Replace local links with actual versions
         run: |
-          cd example
           sed -i 's#"@acrool/react-skeleton": "link:.."#"@acrool/react-skeleton": "1.0.0"#' package.json
           sed -i 's#"react": "link:../node_modules/react"#"react": "^18.0.0"#' package.json
           sed -i 's#"react-dom": "link:../node_modules/react-dom"#"react-dom": "^18.0.0"#' package.json
