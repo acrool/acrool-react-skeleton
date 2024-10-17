@@ -1,9 +1,9 @@
 name: Deploy Storybook to Pages
 
+# 當創建或發佈新的 release 時觸發
 on:
-  push:
-    branches:
-      - main
+  release:
+    types: [published]
 
 jobs:
   deploy:
@@ -24,7 +24,7 @@ jobs:
 
       - name: Replace local links with actual versions
         run: |
-          sed -i 's#"@acrool/react-skeleton": "link:.."#"@acrool/react-skeleton": "1.0.0"#' package.json
+          sed -i 's#"@acrool/react-skeleton": "link:.."#"@acrool/react-skeleton": "latest"#' package.json
           sed -i 's#"react": "link:../node_modules/react"#"react": "^18.0.0"#' package.json
           sed -i 's#"react-dom": "link:../node_modules/react-dom"#"react-dom": "^18.0.0"#' package.json
 
