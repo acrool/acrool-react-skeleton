@@ -20,7 +20,7 @@ jobs:
 
       - name: Replace local links with actual versions
         run: |
-          cd examples
+          cd example
           sed -i 's#"@acrool/react-skeleton": "link:.."#"@acrool/react-skeleton": "1.0.0"#' package.json
           sed -i 's#"react": "link:../node_modules/react"#"react": "^18.0.0"#' package.json
           sed -i 's#"react-dom": "link:../node_modules/react-dom"#"react-dom": "^18.0.0"#' package.json
