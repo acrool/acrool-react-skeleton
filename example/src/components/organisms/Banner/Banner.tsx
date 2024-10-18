@@ -1,22 +1,27 @@
 import styled from 'styled-components';
 import {useRef} from 'react';
 import domtoimage from 'dom-to-image';
-import Github from '../../assets/github.svg?react';
-import {media} from '@acrool/react-grid';
+import Github from './github.svg?react';
+import {Container, media} from '@acrool/react-grid';
 
 
 interface IProps {
     className?: string
+    repositoryUrl: string
+    name: string
+
 }
 
 
 
-const repositoryUrl = 'https://github.com/acrool/acrool-react-skeleton';
-const name = 'Acrool React Skeleton';
+const name = 'Acrool React Img';
+const repositoryUrl = 'https://github.com/acrool/acrool-react-img';
 
 
 const Banner = ({
     className,
+    name,
+    repositoryUrl,
 }: IProps) => {
     const ref = useRef<HTMLDivElement>(null);
 
@@ -41,12 +46,13 @@ const Banner = ({
         <a href={repositoryUrl} target="_blank" rel="noopener noreferrer">
             <Github width={40} height={40}/>
         </a>
-        {/*<DownloadButton type="button" onClick={downloadBanner}>Download Banner</DownloadButton>*/}
+        <DownloadButton type="button" onClick={downloadBanner}>Download Banner</DownloadButton>
 
         <DownloadWrapper ref={ref}>
             <img src="/logo.svg" alt={name}/>
             <h1>{name}</h1>
         </DownloadWrapper>
+
     </BannerRoot>;
 };
 
@@ -62,8 +68,7 @@ const DownloadWrapper = styled.div`
   justify-content: center;
   padding: 20px;
   height: 200px;
-  max-width: 920px;
-  width: 100%;
+  width: 920px;
   gap: 12px;
   background-color: #000;
 
