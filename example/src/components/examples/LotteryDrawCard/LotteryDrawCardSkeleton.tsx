@@ -20,7 +20,7 @@ const LotteryDrawCardSkeleton = () => {
                 .map((key) => {
                     return <Flex column className="gap-2" key={key}>
                         <Skeleton h={110}/>
-                        <Skeleton round w={46} className="mx-auto"/>
+                        <Skeleton r w={46} className="mx-auto"/>
                         <Skeleton text="#2412394" className="mx-auto"/>
                     </Flex>;
                 })}

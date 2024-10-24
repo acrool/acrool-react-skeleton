@@ -1,6 +1,6 @@
-import {TSizeValue} from './types';
+import {TRadiusValue, TSizeValue} from './types';
 import CSS from 'csstype';
-import {getSizeValue} from './utils';
+import {getRadiusValue, getSizeValue} from './utils';
 import {clsx} from 'clsx';
 import styles from './skeleton.module.scss';
 
@@ -11,8 +11,8 @@ interface IProps {
     style?: CSS.Properties
     w?: TSizeValue
     h?: TSizeValue
+    r?: TRadiusValue
     text?: string
-    round?: boolean
     aspect?: string|number
     pause?: boolean
 }
@@ -23,14 +23,15 @@ interface IProps {
  * @param className
  * @param w
  * @param h
+ * @param r
  * @param shape
  */
 const Skeleton = ({
     className,
     w,
     h,
+    r,
     aspect,
-    round,
     text,
     pause
 }: IProps) => {
@@ -40,10 +41,10 @@ const Skeleton = ({
         style={{
             width: text ? 'auto' : w ? getSizeValue(w): undefined,
             height: text ? 'auto' : h ? getSizeValue(h): undefined,
+            '--skeleton-radius': typeof r !== 'undefined' ? getRadiusValue(r) : undefined,
             aspectRatio: aspect,
-        }}
-        data-aspect={aspect ? '': undefined}
-        data-round={round ? '': undefined}
+        } as CSS.Properties}
+        data-circle={r === true ? '':undefined}
         data-pause={pause ? '': undefined}
     >
         {text ?? '⬛'}
