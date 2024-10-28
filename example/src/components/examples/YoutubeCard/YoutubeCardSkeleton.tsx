@@ -10,7 +10,7 @@ const YoutubeCardSkeleton = () => {
             <Skeleton w={330} h={180}/>
 
             <Flex className="gap-1">
-                <Skeleton round w={32} h={32} className="flex-auto"/>
+                <Skeleton r w={32} h={32} className="flex-auto"/>
                 <Flex className="flex-column gap-1 w-100">
                     <Skeleton w="90%"/>
                     <Skeleton w="60%"/>
@@ -33,7 +33,7 @@ const YoutubeCardSkeletonRoot = styled.div`
     width: 100%;
     height: auto;
     border-radius: 8px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #fff;
     border: 1px solid rgba(133, 133, 133, .2);
     padding: 10px;
     font-size: 18px;
