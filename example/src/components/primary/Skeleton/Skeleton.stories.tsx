@@ -17,7 +17,7 @@ const meta = {
     argTypes: {},
     args: {
         w: 200,
-        h: 200
+        h: 200,
     },
 } satisfies Meta<typeof Skeleton>;
 
@@ -28,4 +28,16 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
     args: {},
+};
+
+
+export const WithRadius: Story = {
+    args: {
+        r: 30
+    },
+};
+export const WithRound: Story = {
+    args: {
+        r: true
+    },
 };
