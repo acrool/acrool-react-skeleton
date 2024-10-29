@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/acrool/acrool-react-skeleton/compare/v1.1.0-alpha.0...v1.1.0) (2024-10-29)
+
+
+### Features
+
+* 新增 storybook lotteryCard2骨架屏 ([0d7d7fa](https://github.com/acrool/acrool-react-skeleton/commit/0d7d7fa67d9ac1ebe24c2ae68a2b3b91b7b36064)), closes [#TS-910](https://github.com/acrool/acrool-react-skeleton/issues/TS-910)
+
 ## [1.1.0-alpha.0](https://github.com/acrool/acrool-react-skeleton/compare/v1.0.2...v1.1.0-alpha.0) (2024-10-25)
 
 
